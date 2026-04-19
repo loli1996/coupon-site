@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كود خصم</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f2f2f2;
+  text-align: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.coupon {
+  margin: 20px;
+  padding: 20px;
+  border: 2px dashed #999;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+button {
+  padding: 15px;
+  width: 100%;
+  border-radius: 30px;
+  background: black;
+  color: white;
+  border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>كود خصم نايس ون حتى 80%</h2>
+
+  <div class="coupon" id="code">OB717</div>
+
+  <button onclick="copyCode()">اضغط لنسخ الكود</button>
+</div>
+
+<script>
+function copyCode() {
+  const code = document.getElementById("code").innerText;
+  navigator.clipboard.writeText(code);
+  alert("تم نسخ: " + code);
+}
+</script>
+
+</body>
+</html>
